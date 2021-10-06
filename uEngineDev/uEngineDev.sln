@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uEngine", "uEngine\uEngine.csproj", "{2BE8F26F-9D74-4DE7-90B7-A429D9D90CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxaint", "Galaxaint\Galaxaint.csproj", "{4440D372-F597-46CF-88C6-265D9FFF96C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BE8F26F-9D74-4DE7-90B7-A429D9D90CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BE8F26F-9D74-4DE7-90B7-A429D9D90CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BE8F26F-9D74-4DE7-90B7-A429D9D90CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BE8F26F-9D74-4DE7-90B7-A429D9D90CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4440D372-F597-46CF-88C6-265D9FFF96C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4440D372-F597-46CF-88C6-265D9FFF96C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4440D372-F597-46CF-88C6-265D9FFF96C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4440D372-F597-46CF-88C6-265D9FFF96C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93B9869D-4D27-4838-99B6-28292B3F0BB8}
+	EndGlobalSection
+EndGlobal
