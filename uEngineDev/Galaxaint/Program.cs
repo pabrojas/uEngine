@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Windows.Forms;
+using uEngine;
+
 
 namespace Galaxaint
 {
@@ -13,7 +15,11 @@ namespace Galaxaint
         [STAThread]
         static void Main(string[] args)
         {
-            GalaxaintGame game = new GalaxaintGame(800, 600, 30);
+
+            uResourcesManager.LoadImage("playerShip1_blue.png", "player");
+
+
+            GalaxaintGame game = new GalaxaintGame(600, 800, 60);
             game.Start();
             Application.Run();
         }

@@ -14,6 +14,9 @@ namespace uEngine
         private uWindow Window;
         private int TargetFPS { set; get; }
 
+        public int DeltaTime { private set; get; }
+
+
         public uGame(int width, int height, int targetFPS)
         {
             Window = new uWindow(width, height);
@@ -43,12 +46,14 @@ namespace uEngine
                 sw.Stop();
 
                 int elapsedMilliseconds = (int)sw.ElapsedMilliseconds;
-
+                DeltaTime = elapsedMilliseconds;
+            
                 int pause = targetMilliseconds - elapsedMilliseconds;
                 if (pause < 1)
                 {
                     pause = 1;
                 }
+                DeltaTime += pause;
 
                 Thread.Sleep(pause);
 

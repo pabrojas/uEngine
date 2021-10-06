@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="managers\uKeyboardManager.cs" />
+    <Compile Include="uInputManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uResourcesManager.cs" />
     <Compile Include="uGame.cs" />
     <Compile Include="uWindow.cs">
       <SubType>Form</SubType>
