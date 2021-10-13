@@ -19,6 +19,7 @@ namespace Galaxaint
             try
             {
                 uResourcesManager.LoadImage("playerShip1_blue.png", "player");
+                uResourcesManager.LoadImage("laserBlue02.png", "laser");
             }
             catch(uResourceNotFoundException ex)
             {
