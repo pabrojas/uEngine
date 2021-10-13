@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\uResourceIdDuplicatedException.cs" />
+    <Compile Include="Exceptions\uResourceIdNotFoundException.cs" />
+    <Compile Include="Exceptions\uResourceNotFoundException.cs" />
     <Compile Include="managers\uKeyboardManager.cs" />
     <Compile Include="uInputManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
