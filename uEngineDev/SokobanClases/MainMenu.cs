@@ -36,6 +36,54 @@ namespace SokobanClases
 
         public void ProcessInput(int deltaTime)
         {
+            if(alive == false)
+            {
+                return;
+            }
+
+            if( uInputManager.IsKeyPressed("Enter") )
+            {
+                alive = false;
+                return;
+            }
+
+            if( uInputManager.IsKeyPressed("Up") )
+            {
+                if ( keyUpPressed == false )
+                {
+                    keyUpPressed = true;
+                    selected--;
+                    if (selected < 0)
+                    {
+                        selected = 0;
+                    }
+                }
+            }
+            else
+            {
+                keyUpPressed = false;
+            }
+
+
+            if( uInputManager.IsKeyPressed("Down") )
+            {
+                if (keyDownPressed == false)
+                {
+                    keyDownPressed = true;
+                    selected++;
+                    if (selected > 3)
+                    {
+                        selected = 3;
+                    }
+                }
+            }
+            else
+            {
+                keyDownPressed = false;
+            }
+
+
+
         }
 
         public void Render(Graphics g, int deltaTime)
@@ -83,7 +131,7 @@ namespace SokobanClases
         {
             if( selected == 0 )
             {
-                //return new Gameplay();
+                return new GameplayScene(Width, Height);
             }
             else if (selected == 1)
             {

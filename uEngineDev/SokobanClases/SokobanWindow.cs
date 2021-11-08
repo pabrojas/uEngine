@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Models;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -11,12 +12,22 @@ namespace SokobanClases
 {
     public class SokobanWindow : uGame
     {
+        private static SokobanWindow _instance;
 
         private IScene currentScene;
+        public SokobanModel Model { private set; get; }
 
-        public SokobanWindow(int width, int height, int targetFPS) : base(width, height, targetFPS)
+        public SokobanWindow(SokobanModel model, int width, int height, int targetFPS) : base(width, height, targetFPS)
         {
+            SokobanWindow._instance = this;
+
             currentScene = new SplashScreen(width, height);
+            Model = model;
+        }
+
+        public static SokobanWindow instance()
+        {
+            return SokobanWindow._instance;
         }
 
         public override void GameUpdate()
