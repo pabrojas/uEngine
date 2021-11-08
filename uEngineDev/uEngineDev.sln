@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uEngine", "uEngine\uEngine.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxaint", "Galaxaint\Galaxaint.csproj", "{4440D372-F597-46CF-88C6-265D9FFF96C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sokoban", "Sokoban\Sokoban.csproj", "{ACAC376F-E845-4DCB-BAD6-253F4382B242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SokobanClases", "SokobanClases\SokobanClases.csproj", "{4BFED6B3-3272-4BAD-B3EE-2A103D7D2932}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{4440D372-F597-46CF-88C6-265D9FFF96C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4440D372-F597-46CF-88C6-265D9FFF96C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4440D372-F597-46CF-88C6-265D9FFF96C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAC376F-E845-4DCB-BAD6-253F4382B242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAC376F-E845-4DCB-BAD6-253F4382B242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAC376F-E845-4DCB-BAD6-253F4382B242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAC376F-E845-4DCB-BAD6-253F4382B242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BFED6B3-3272-4BAD-B3EE-2A103D7D2932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BFED6B3-3272-4BAD-B3EE-2A103D7D2932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BFED6B3-3272-4BAD-B3EE-2A103D7D2932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BFED6B3-3272-4BAD-B3EE-2A103D7D2932}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

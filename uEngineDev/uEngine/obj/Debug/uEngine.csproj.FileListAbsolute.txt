@@ -6,3 +6,11 @@ C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\u
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.csproj.CoreCompileInputs.cache
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.dll
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\OneDrive\Desktop\Repositorios\uEngine\uEngineDev\uEngine\bin\Debug\uEngine.dll
+C:\Users\Pablo Rojas\OneDrive\Desktop\Repositorios\uEngine\uEngineDev\uEngine\bin\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\OneDrive\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.csproj.AssemblyReference.cache
+C:\Users\Pablo Rojas\OneDrive\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.uWindow.resources
+C:\Users\Pablo Rojas\OneDrive\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.csproj.GenerateResource.cache
+C:\Users\Pablo Rojas\OneDrive\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.csproj.CoreCompileInputs.cache
+C:\Users\Pablo Rojas\OneDrive\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.dll
+C:\Users\Pablo Rojas\OneDrive\Desktop\Repositorios\uEngine\uEngineDev\uEngine\obj\Debug\uEngine.pdb

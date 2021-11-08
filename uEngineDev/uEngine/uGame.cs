@@ -17,6 +17,7 @@ namespace uEngine
         public int DeltaTime { private set; get; }
 
 
+
         public uGame(int width, int height, int targetFPS)
         {
             Window = new uWindow(width, height);
