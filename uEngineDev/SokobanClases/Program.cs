@@ -17,6 +17,13 @@ namespace SokobanClases
             uResourcesManager.LoadFont("Kenney Future.ttf", "fuente-menu");
             uResourcesManager.LoadImage("logo_idvrv.png", "logo-escuela");
 
+            uResourcesManager.LoadImage("block_05.png", "wall");
+            uResourcesManager.LoadImage("ground_06.png", "floor");
+            uResourcesManager.LoadImage("crate_07.png", "box");
+            uResourcesManager.LoadImage("crate_10.png", "box-on-goal");
+            uResourcesManager.LoadImage("environment_10.png", "goal");
+            uResourcesManager.LoadImage("player_05.png", "player");
+
             SokobanModel model = new SokobanModel();
             model.Add("level0.txt");
             model.Add("level1.txt");

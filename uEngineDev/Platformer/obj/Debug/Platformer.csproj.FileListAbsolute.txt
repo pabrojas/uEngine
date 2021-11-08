@@ -1,0 +1,8 @@
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\bin\Debug\Platformer.exe.config
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\bin\Debug\Platformer.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\bin\Debug\Platformer.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\bin\Debug\uEngine.dll
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\bin\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.csproj.CoreCompileInputs.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.pdb
