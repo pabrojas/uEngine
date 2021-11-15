@@ -16,12 +16,24 @@ namespace uEngine
 
         public int DeltaTime { private set; get; }
 
-
+        private List<uGameObject> gameObjects;
 
         public uGame(int width, int height, int targetFPS)
         {
             Window = new uWindow(width, height);
             TargetFPS = targetFPS;
+
+            gameObjects = new List<uGameObject>();
+        }
+
+        public void Add(uGameObject ugo)
+        {
+            gameObjects.Add(ugo);
+        }
+
+        public void Remove(uGameObject ugo)
+        {
+            gameObjects.Remove(ugo);
         }
 
         public void Start()
@@ -61,9 +73,25 @@ namespace uEngine
             }
         }
 
+        
+        public virtual void Render(Graphics g)
+        {
+            foreach (uGameObject ugo in gameObjects)
+            {
+                Image image = ugo.Sprite.GetCurrentFrame();
+                Image toPaint = (Image)image.Clone();
+
+                if (ugo.Facing == Direction.Left)
+                {
+                    toPaint.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                }
+
+                g.DrawImage(toPaint, ugo.X, ugo.Y, ugo.Width, ugo.Height);
+            }
+        }
+
         public abstract void ProcessInput();
         public abstract void GameUpdate();
-        public abstract void Render(Graphics g);
     }
 
 }

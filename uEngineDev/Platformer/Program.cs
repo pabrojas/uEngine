@@ -13,15 +13,26 @@ namespace Platformer
     {
         static void Main(string[] args)
         {
+            uResourcesManager.LoadImage("backgroundForest.png", "background");
+            uResourcesManager.LoadImage("slice03_03.png", "ground");
 
-            uResourcesManager.LoadImage("character_zombie_walk0.png", "walk0");
-            uResourcesManager.LoadImage("character_zombie_walk1.png", "walk1");
-            uResourcesManager.LoadImage("character_zombie_walk2.png", "walk2");
-            uResourcesManager.LoadImage("character_zombie_walk3.png", "walk3");
-            uResourcesManager.LoadImage("character_zombie_walk4.png", "walk4");
-            uResourcesManager.LoadImage("character_zombie_walk5.png", "walk5");
-            uResourcesManager.LoadImage("character_zombie_walk6.png", "walk6");
-            uResourcesManager.LoadImage("character_zombie_walk7.png", "walk7");
+
+            for (int i = 1; i <= 16; i++)
+            {
+                uResourcesManager.LoadImage("Idle (" + i +").png", "idle" + i);
+            }
+
+            for (int i = 1; i <= 20; i++)
+            {
+                uResourcesManager.LoadImage("Walk (" + i + ").png", "walk" + i);
+            }
+
+            for (int i = 1; i <= 20; i++)
+            {
+                uResourcesManager.LoadImage("Run (" + i + ").png", "run" + i);
+            }
+
+
 
             PlatformerWindow window = new PlatformerWindow(1024, 768, 60);
             window.Start();

@@ -6,3 +6,4 @@ C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\bin\Debu
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.csproj.CoreCompileInputs.cache
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.exe
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.csproj.AssemblyReference.cache
