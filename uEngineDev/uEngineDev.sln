@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SokobanClases", "SokobanCla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platformer", "Platformer\Platformer.csproj", "{C9C2AB2B-EB66-4385-B8BC-7B71CDBB7AF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "u2lab2", "u2lab2\u2lab2.csproj", "{4EF91D7D-B69F-499F-9E5E-D11DE008F4C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C9C2AB2B-EB66-4385-B8BC-7B71CDBB7AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9C2AB2B-EB66-4385-B8BC-7B71CDBB7AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9C2AB2B-EB66-4385-B8BC-7B71CDBB7AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF91D7D-B69F-499F-9E5E-D11DE008F4C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF91D7D-B69F-499F-9E5E-D11DE008F4C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF91D7D-B69F-499F-9E5E-D11DE008F4C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF91D7D-B69F-499F-9E5E-D11DE008F4C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

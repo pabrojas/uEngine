@@ -1,0 +1,9 @@
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\bin\Debug\u2lab2.exe.config
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\bin\Debug\u2lab2.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\bin\Debug\u2lab2.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\bin\Debug\uEngine.dll
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\bin\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\obj\Debug\u2lab2.csproj.AssemblyReference.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\obj\Debug\u2lab2.csproj.CoreCompileInputs.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\obj\Debug\u2lab2.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\u2lab2\obj\Debug\u2lab2.pdb

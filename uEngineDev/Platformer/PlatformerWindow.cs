@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -15,22 +16,45 @@ namespace Platformer
         private uSprite walk;
         private uSprite run;
 
+        private List<uGameObject> ground;
+
         private uGameObject player;
+        private int gravedadMundo;
+        private int velocidadEjeYPlayer;
 
-        public PlatformerWindow(int width, int height, int targetFPS) : base(width, height, targetFPS)
+
+        private bool SaltoPresionado;
+
+
+
+
+
+        public PlatformerWindow(int width, int height, uViewport viewport,  int targetFPS) : base(width, height, viewport, targetFPS)
         {
-
+            
             InitializeSprites();
 
-            player = new uGameObject(0, 568, 100, 100, idle);
+            gravedadMundo = 1;
+            velocidadEjeYPlayer = 0;
+
+            SaltoPresionado = false;
+
+            player = new uGameObject(0, 68, 100, 100, idle);
             Add(player);
 
+            int size = 50;
+            ground = new List<uGameObject>();
+            uGameObject ugo;
             uSingleSprite sprite = new uSingleSprite(uResourcesManager.GetImage("ground"), 100, 100);
-            for (int i = 0; i < 1024; i += 100)
+            for (int i = 0; i < 1024; i += size)
             {
-                Add(new uGameObject(i, 668, 100, 100, sprite));
+                ugo = new uGameObject(i, 668, size, size, sprite);
+                Add(ugo);
+                ground.Add(ugo);
             }
-            Add(new uGameObject(400, 568, 100, 100, sprite));
+            ugo = new uGameObject(400, 668 - size, size, size, sprite);
+            Add(ugo);
+            ground.Add(ugo);
 
 
         }
@@ -62,23 +86,51 @@ namespace Platformer
         public override void GameUpdate()
         {
             player.Update(DeltaTime);
+
+            velocidadEjeYPlayer += gravedadMundo;
+
+            if (!hayColision())
+            {
+                player.Y += velocidadEjeYPlayer;
+
+                if( hayColision() )
+                {
+                    //player.Y -= velocidadEjeYPlayer;
+                    do
+                    {
+                        player.Y -= 1;
+                    }
+                    while (hayColision());
+
+                    velocidadEjeYPlayer = 0;
+                }
+
+            }
+
+
+
+
+
         }
 
         public override void ProcessInput()
         {
             int step = 2;
-            if( uInputManager.IsKeyPressed("Right") )
+            uSprite sprite = null;
+            int horizontal = 0;
+            if ( uInputManager.IsKeyPressed("Right") )
             {
+                
                 player.Facing = Direction.Right;
                 if (uInputManager.IsKeyPressed("ShiftKey"))
                 {
-                    player.X += step*2;
-                    player.Sprite = run;
+                    sprite = run;
+                    horizontal = step * 2;
                 }
                 else
                 {
-                    player.X += step;
-                    player.Sprite = walk;
+                    sprite = walk;
+                    horizontal = step;
                 }
             }
             else if (uInputManager.IsKeyPressed("Left"))
@@ -86,19 +138,59 @@ namespace Platformer
                 player.Facing = Direction.Left;
                 if (uInputManager.IsKeyPressed("ShiftKey"))
                 {
-                    player.X -= step * 2;
-                    player.Sprite = run;
+                    sprite = run;
+                    horizontal = -step * 2;
+                    
                 }
                 else
                 {
-                    player.X -= step;
-                    player.Sprite = walk;
+                    sprite = walk;
+                    horizontal = -step;
+                    
                 }
             }
             else
             {
-                player.Sprite= idle;
+                player.Sprite = idle;
             }
+
+            if(sprite != null && horizontal != 0)
+            {
+                if (!hayColision())
+                {
+                    player.X += horizontal;
+                    player.Sprite = sprite;
+
+                    Viewport.X -= horizontal;
+
+                    if( hayColision() )
+                    {
+                        player.X -= horizontal;
+                        Viewport.X += horizontal;
+                    }
+                    
+
+                }
+            }
+
+
+            if( uInputManager.IsKeyPressed("Space") )
+            {
+                if( SaltoPresionado == false )
+                {
+                    SaltoPresionado = true;
+                    velocidadEjeYPlayer = -20;
+                }
+            }
+            else
+            {
+                SaltoPresionado = false;
+            }
+
+
+
+
+            
 
 
         }
@@ -111,21 +203,20 @@ namespace Platformer
             base.Render(g);
         }
 
-        /*
-        public override void Render(Graphics g)
+        private bool hayColision()
         {
-            Image image = player.Sprite.GetCurrentFrame();
-            Image toPaint = (Image)image.Clone();
-
-            if (player.Facing == Direction.Left)
+            foreach (uGameObject element in ground)
             {
-                toPaint.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                Rect r1 = new Rect(player.X, player.Y, player.Width, player.Height);
+                Rect r2 = new Rect(element.X, element.Y, element.Width, element.Height);
+                if (r1.IntersectsWith(r2))
+                {
+                    return true;
+                }
+
+
             }
-             
-            g.DrawImage(toPaint, player.X, player.Y, player.Width, player.Height);
-            
-
-
-        }*/
+            return false;
+        }
     }
 }

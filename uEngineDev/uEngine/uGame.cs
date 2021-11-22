@@ -11,16 +11,24 @@ namespace uEngine
 {
     public abstract class uGame
     {
+        public int WindowWidth { private set; get; }
+        public int WindowHeight { private set; get; }
+
         private uWindow Window;
         private int TargetFPS { set; get; }
+
+        protected uViewport Viewport;
 
         public int DeltaTime { private set; get; }
 
         private List<uGameObject> gameObjects;
 
-        public uGame(int width, int height, int targetFPS)
+        public uGame(int width, int height, uViewport viewport, int targetFPS)
         {
+            WindowWidth = width;
+            WindowHeight = height;
             Window = new uWindow(width, height);
+            Viewport = viewport;
             TargetFPS = targetFPS;
 
             gameObjects = new List<uGameObject>();
@@ -85,8 +93,30 @@ namespace uEngine
                 {
                     toPaint.RotateFlip(RotateFlipType.RotateNoneFlipX);
                 }
+                else if (ugo.Facing == Direction.Up)
+                {
+                    toPaint.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                }
+                else if (ugo.Facing == Direction.Down)
+                {
+                    toPaint.RotateFlip(RotateFlipType.Rotate270FlipY);
+                }
 
-                g.DrawImage(toPaint, ugo.X, ugo.Y, ugo.Width, ugo.Height);
+
+
+                // uGameObject  -> siempre trabaja en coordenadas de mundo (double)
+                // g.DrawImage  -> siempre trabaja en coordenadas de ventana (pixeles)
+
+
+                double xRatio = Viewport.Width/WindowWidth;
+                double yRatio = Viewport.Height/WindowHeight;
+
+                int x = (int)(ugo.X * xRatio - Viewport.X); //trunca los valores decimales
+                int y = (int)(ugo.Y * yRatio - Viewport.Y);
+                int width = (int)(ugo.Width * xRatio);
+                int height = (int)(ugo.Height * yRatio);
+
+                g.DrawImage(toPaint, x, y, width, height);
             }
         }
 

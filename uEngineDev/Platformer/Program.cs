@@ -34,7 +34,7 @@ namespace Platformer
 
 
 
-            PlatformerWindow window = new PlatformerWindow(1024, 768, 60);
+            PlatformerWindow window = new PlatformerWindow(1024, 768, new uViewport(0, 0, 1024, 768), 60);
             window.Start();
 
             Application.Run();

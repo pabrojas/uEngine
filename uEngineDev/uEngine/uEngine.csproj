@@ -56,6 +56,7 @@
     <Compile Include="uResourcesManager.cs" />
     <Compile Include="uGame.cs" />
     <Compile Include="uSprite.cs" />
+    <Compile Include="uViewport.cs" />
     <Compile Include="uWindow.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,19 +8,19 @@ namespace uEngine
 {
     public enum Direction
     {
-        Left, Right
+        Left, Right, Up, Down
     }
 
     public class uGameObject
     {
-        public int X { set; get; }
-        public int Y { set; get; }
-        public int Width { set; get; }
-        public int Height { set; get; }
+        public double X { set; get; }
+        public double Y { set; get; }
+        public double Width { set; get; }
+        public double Height { set; get; }
         public uSprite Sprite { set; get; }
         public Direction Facing { set; get; }
 
-        public uGameObject(int x, int y, int width, int height, uSprite sprite)
+        public uGameObject(double x, double y, double width, double height, uSprite sprite)
         {
             X = x;
             Y = y;
