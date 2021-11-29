@@ -86,37 +86,30 @@ namespace uEngine
         {
             foreach (uGameObject ugo in gameObjects)
             {
-                Image image = ugo.Sprite.GetCurrentFrame();
-                Image toPaint = (Image)image.Clone();
-
-                if (ugo.Facing == Direction.Left)
+                if (Viewport.Contains(ugo))
                 {
-                    toPaint.RotateFlip(RotateFlipType.RotateNoneFlipX);
+
+                    Image image = ugo.Sprite.GetCurrentFrame();
+                    Image toPaint = (Image)image.Clone();
+
+                    if (ugo.Facing == Direction.Left)
+                    {
+                        toPaint.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                    }
+                    else if (ugo.Facing == Direction.Up)
+                    {
+                        toPaint.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                    }
+                    else if (ugo.Facing == Direction.Down)
+                    {
+                        toPaint.RotateFlip(RotateFlipType.Rotate270FlipY);
+                    }
+
+                    double xRatio = Viewport.Width / WindowWidth;
+                    double yRatio = Viewport.Height / WindowHeight;
+                    uWindowObject uwo = uWindowObject.Parse(ugo, Viewport, xRatio, yRatio);
+                    g.DrawImage(toPaint, uwo.X, uwo.Y, uwo.Width, uwo.Height);
                 }
-                else if (ugo.Facing == Direction.Up)
-                {
-                    toPaint.RotateFlip(RotateFlipType.Rotate270FlipNone);
-                }
-                else if (ugo.Facing == Direction.Down)
-                {
-                    toPaint.RotateFlip(RotateFlipType.Rotate270FlipY);
-                }
-
-
-
-                // uGameObject  -> siempre trabaja en coordenadas de mundo (double)
-                // g.DrawImage  -> siempre trabaja en coordenadas de ventana (pixeles)
-
-
-                double xRatio = Viewport.Width/WindowWidth;
-                double yRatio = Viewport.Height/WindowHeight;
-
-                int x = (int)(ugo.X * xRatio - Viewport.X); //trunca los valores decimales
-                int y = (int)(ugo.Y * yRatio - Viewport.Y);
-                int width = (int)(ugo.Width * xRatio);
-                int height = (int)(ugo.Height * yRatio);
-
-                g.DrawImage(toPaint, x, y, width, height);
             }
         }
 

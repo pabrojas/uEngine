@@ -41,6 +41,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\uResourceIdDuplicatedException.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="uWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="uWindowObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="uWindow.resx">

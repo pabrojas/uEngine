@@ -7,3 +7,4 @@ C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debu
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.exe
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.pdb
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.csproj.AssemblyReference.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\Platformer\obj\Debug\Platformer.csproj.CopyComplete

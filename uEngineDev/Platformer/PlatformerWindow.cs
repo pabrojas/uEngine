@@ -39,12 +39,23 @@ namespace Platformer
 
             SaltoPresionado = false;
 
+            uGameObject ugo;
+
+            Image background = uResourcesManager.GetImage("background");
+            uSingleSprite bg = new uSingleSprite(background, 1024, 768);
+
+            for (int i = -3000; i < 3000; i += 1024)
+            {
+                ugo = new uGameObject(i, 0, 1024, 768, bg);
+                Add(ugo);
+            }
+
             player = new uGameObject(0, 68, 100, 100, idle);
             Add(player);
 
             int size = 50;
             ground = new List<uGameObject>();
-            uGameObject ugo;
+            
             uSingleSprite sprite = new uSingleSprite(uResourcesManager.GetImage("ground"), 100, 100);
             for (int i = 0; i < 1024; i += size)
             {
@@ -115,6 +126,34 @@ namespace Platformer
 
         public override void ProcessInput()
         {
+            if (uInputManager.IsKeyPressed("Right"))
+            {
+                Viewport.X += 10;
+                player.X += 10;
+            }
+            else if (uInputManager.IsKeyPressed("Left"))
+            {
+                Viewport.X -= 10;
+                player.X -= 10;
+            }
+
+
+            double scale = 0.3;
+            if (uInputManager.IsKeyPressed("Up"))
+            {
+                Viewport.Width -= 16 * scale;
+                Viewport.Height -= 9 * scale;
+            }
+            else if (uInputManager.IsKeyPressed("Down"))
+            {
+                Viewport.Width += 16 * scale;
+                Viewport.Height += 9 * scale;
+            }
+
+
+
+
+            /*
             int step = 2;
             uSprite sprite = null;
             int horizontal = 0;
@@ -165,7 +204,7 @@ namespace Platformer
 
                     if( hayColision() )
                     {
-                        player.X -= horizontal;
+                        //player.X -= horizontal;
                         Viewport.X += horizontal;
                     }
                     
@@ -189,16 +228,16 @@ namespace Platformer
 
 
 
+            */
 
-            
 
 
         }
 
         public override void Render(Graphics g)
         {
-            Image background = uResourcesManager.GetImage("background");
-            g.DrawImage(background, 0, 0, 1024, 768);
+            //Image background = uResourcesManager.GetImage("background");
+            //g.DrawImage(background, 0, 0, 1024, 768);
 
             base.Render(g);
         }
