@@ -1,9 +1,0 @@
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\bin\Debug\SokobanClases.exe.config
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\bin\Debug\SokobanClases.exe
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\bin\Debug\SokobanClases.pdb
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\bin\Debug\uEngine.dll
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\bin\Debug\uEngine.pdb
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\obj\Debug\SokobanClases.csproj.AssemblyReference.cache
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\obj\Debug\SokobanClases.csproj.CoreCompileInputs.cache
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\obj\Debug\SokobanClases.exe
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\uEngineDev\SokobanClases\obj\Debug\SokobanClases.pdb
