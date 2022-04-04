@@ -18,6 +18,8 @@ namespace uEngine
 
         public Point MouseLocation;
 
+        public bool mousePressed;
+
         public uWindow(int width, int height)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -27,6 +29,8 @@ namespace uEngine
             GraphicManager = BufferedGraphicsManager.Current;
             GraphicManager.MaximumBuffer = new System.Drawing.Size(width + 1, height + 1);
             ManagedBackBuffer = GraphicManager.Allocate(CreateGraphics(), ClientRectangle);
+
+            mousePressed = false;
 
             MouseMove += CustomMouseMove;
             MouseDown += CustomMouseDown;
@@ -57,12 +61,19 @@ namespace uEngine
             MouseLocation = e.Location;
         }
 
+        public bool isMousePressed()
+        {
+            return mousePressed;
+        }
+
         private void CustomMouseDown(object sender, MouseEventArgs e)
         {
+            mousePressed = true;
         }
 
         private void CustomMouseUp(object sender, MouseEventArgs e)
         {
+            mousePressed = false;
         }
 
         private void CustomKeyDown(object sender, KeyEventArgs e)

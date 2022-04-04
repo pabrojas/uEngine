@@ -64,7 +64,10 @@ namespace uEngine
             thread.Start();
         }
 
-
+        public bool isMousePressed()
+        {
+            return Window.isMousePressed();
+        }
 
         public abstract void ProcessInput();
         public abstract void GameUpdate();
