@@ -46,6 +46,7 @@
     <Compile Include="Exceptions\uResourceIdDuplicatedException.cs" />
     <Compile Include="Exceptions\uResourceIdNotFoundException.cs" />
     <Compile Include="Exceptions\uResourceNotFoundException.cs" />
+    <Compile Include="uFontManager.cs" />
     <Compile Include="uImageManager.cs" />
     <Compile Include="uGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

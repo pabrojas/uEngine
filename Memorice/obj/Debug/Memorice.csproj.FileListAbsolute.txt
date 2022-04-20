@@ -1,0 +1,10 @@
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\bin\Debug\Memorice.exe.config
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\bin\Debug\Memorice.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\bin\Debug\Memorice.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\bin\Debug\uEngine.dll
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\bin\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\obj\Debug\Memorice.csproj.AssemblyReference.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\obj\Debug\Memorice.csproj.CoreCompileInputs.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\obj\Debug\Memorice.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\obj\Debug\Memorice.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Memorice\obj\Debug\Memorice.csproj.CopyComplete
