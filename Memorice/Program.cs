@@ -1,35 +1,85 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using uEngine;
-using Memorice.Model;
 using Memorice.Controller;
+
+/// <summary>
+/// Para realizar una correcta documentación del código en C# es preferible utilizar las etiquetas
+/// correspondientes que nos provee XmlDoc. La explicación de cada una de las etiquetas la podrán
+/// encontrar en el siguiente link: 
+/// <href>https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags</href>
+/// 
+/// El namespace Memorice contiene todas las clases de objetos relacionadas a la implementación
+/// del juego Memorice, dentro de este namespece existen las siguientes subdivisiones:
+/// 
+/// <remarks>
+/// Memorice.Model: namespace que contiene las clases de objetos relacionadas con la lógica 
+/// del juego Memorice
+/// </remarks>
+/// 
+/// <remarks>
+/// Memorice.Controller: namespace que contiene las clases de objetos para convertir desde
+/// los objetos de lógica a los objetos de vista
+/// </remarks>
+/// 
+/// <remarks>
+/// Memorice.Scenes: namespace que continen las clases de objetos de vista, en específico las 
+/// diferentes escenas del juego.
+/// </remarks>
+/// 
+/// </summary>
 
 namespace Memorice
 {
+    /// <summary>
+    /// Clase encargada de inicializar todos los recursos externos que se utilizarán
+    /// y posteriormente lanzar la ventana de uGame
+    /// </summary>
     class Program
     {
         [STAThread]
         static void Main(string[] args)
         {
-            Parser.Initialize();
+            Random random = new Random();
+
+            string[] data = new string[1000];
+            for (int i = 0; i < 1000; i++)
+            {
+                data[i] = random.Next(10000) + "";
+            }
+
+            System.IO.File.WriteAllLines("data.txt", data);
+
+
+
+            //cargo los recursos externos a utilizar en el juego
             LoadResources();
 
+            //el área visible de la ventana de juego será de 1024px de ancho y
+            //768px de alto, el juego intentará llegar a 60FPS
             MemoriceGame game = new MemoriceGame(1024, 768, 30);
             game.Start();
 
+            //necesario para que no se cierre la ejecución del programa
             Application.Run();
 
         }
 
+        /// <summary>
+        /// Método para cargar los recursos externos de imágenes y fuentes
+        /// </summary>
         static void LoadResources()
         {
             //Fuentes
-            uFontManager.Load("Kenney Blocks.ttf", "blocks");
+            uFontManager.Load("Kenney High Square.ttf", "high-square");
+
+            //Imagenes para la escena de nuevo juego
+            uImageManager.Load("NewGame/cinta-doblada.png", "cinta");
+            uImageManager.Load("NewGame/tag.png", "tag-selected");
+            uImageManager.Load("NewGame/tag-selected.png", "tag");
+            uImageManager.Load("NewGame/pabrojas.png", "pabrojas");
+            uImageManager.Load("NewGame/pabrojas2.png", "pabrojas2");
 
 
             //Cartas boca abajo

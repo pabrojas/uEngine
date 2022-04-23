@@ -1,20 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Memorice.Model
 {
+    /// <summary>
+    /// La clase Pair sirve para representar una casilla (i, j) del tablero de juego
+    /// </summary>
     public class Pair
     {
-        public int i { private set; get; }
-        public int j { private set; get; }
+        /// <summary>
+        /// Representa la fila de la casilla dentro del tablero.
+        /// </summary>
+        public int Row { private set; get; }
+        /// <summary>
+        /// Representa la columna de la casilla dentro del tablero.
+        /// </summary>
+        public int Col { private set; get; }
 
-        public Pair(int i, int j)
+        /// <summary>
+        /// Constructor de la clase Pair que representa una casilla del tablero de juego
+        /// </summary>
+        /// <param name="row">corresponde  a la fila de la casilla dentro del tablero</param>
+        /// <param name="col">corresponde  a la columna de la casilla dentro del tablero</param>
+        public Pair(int row, int col)
         {
-            this.i = i;
-            this.j = j;
+            this.Row = row;
+            this.Col = col;
         }
     }
 }

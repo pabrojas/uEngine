@@ -52,7 +52,7 @@
     <Compile Include="model\Card.cs" />
     <Compile Include="model\CardStatus.cs" />
     <Compile Include="model\Pair.cs" />
-    <Compile Include="model\Suits.cs" />
+    <Compile Include="model\Suit.cs" />
     <Compile Include="MemoriceGame.cs" />
     <Compile Include="model\MemoriceLogic.cs" />
     <Compile Include="Program.cs" />
