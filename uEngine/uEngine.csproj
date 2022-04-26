@@ -50,6 +50,8 @@
     <Compile Include="uImageManager.cs" />
     <Compile Include="uGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uInputManager.cs" />
+    <Compile Include="uKeyboardManager.cs" />
     <Compile Include="uWindow.cs">
       <SubType>Form</SubType>
     </Compile>

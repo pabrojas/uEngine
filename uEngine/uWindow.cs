@@ -78,10 +78,14 @@ namespace uEngine
 
         private void CustomKeyDown(object sender, KeyEventArgs e)
         {
+            Keys code = e.KeyCode;
+            uKeyboardManager.Down(code);
         }
 
         private void CustomKeyUp(object sender, KeyEventArgs e)
         {
+            Keys code = e.KeyCode;
+            uKeyboardManager.Up(code);
         }
 
     }
