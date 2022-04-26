@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arkanoid", "Arkanoid\Arkano
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memorice", "Memorice\Memorice.csproj", "{428D6A1A-06D0-43AB-988C-43205BF38361}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selector", "Selector\Selector.csproj", "{F91C036C-4F84-49DB-8D92-9B64F3A9B223}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{428D6A1A-06D0-43AB-988C-43205BF38361}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{428D6A1A-06D0-43AB-988C-43205BF38361}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{428D6A1A-06D0-43AB-988C-43205BF38361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91C036C-4F84-49DB-8D92-9B64F3A9B223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91C036C-4F84-49DB-8D92-9B64F3A9B223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91C036C-4F84-49DB-8D92-9B64F3A9B223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91C036C-4F84-49DB-8D92-9B64F3A9B223}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
