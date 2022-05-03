@@ -7,3 +7,5 @@ C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Selector\obj\Debug\Selector.cs
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Selector\obj\Debug\Selector.csproj.CoreCompileInputs.cache
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Selector\obj\Debug\Selector.exe
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Selector\obj\Debug\Selector.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Selector\obj\Debug\Selector.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Selector\obj\Debug\Selector.csproj.CopyComplete

@@ -17,6 +17,9 @@ namespace uEngine
 
         protected Point MouseLocation { get { return Window.MouseLocation; } }
 
+        protected uScene CurrentScene { set; get; }
+
+        protected int DeltaTime { private set; get; }
 
         
         protected uGame(int windowWidth, int windowHeight, int targetFPS)
@@ -29,22 +32,36 @@ namespace uEngine
         {
             int targetMilliseconds = 1000 / TargetFPS;
 
-            while (true)
+            bool continueFlag = true;
+            while (continueFlag)
             {
+                if(CurrentScene == null)
+                {
+                    continueFlag = false;
+                    continue;
+                }
+
+
                 Stopwatch sw = new Stopwatch();
                 sw.Start();
 
                 ProcessInput();
-                GameUpdate();
+                GameUpdate(DeltaTime);
                 Render(Window.GetGraphics());
                 
                 //realiza el cambio del buffer
                 Window.Render();
 
+                //actualizo CurrentScene
+                if (CurrentScene != null && !CurrentScene.IsAlive())
+                {
+                    CurrentScene = CurrentScene.Next();
+                }
 
                 sw.Stop();
 
                 int elapsedMilliseconds = (int)sw.ElapsedMilliseconds;
+                DeltaTime = elapsedMilliseconds;
 
                 int pause = targetMilliseconds - elapsedMilliseconds;
                 if (pause < 1)
@@ -70,8 +87,11 @@ namespace uEngine
         }
 
         public abstract void ProcessInput();
-        public abstract void GameUpdate();
-        public abstract void Render(Graphics g);
+        public abstract void GameUpdate(int DeltaTime);
+        public virtual void Render(Graphics g)
+        {
+            CurrentScene.Render(g);
+        }
 
     }
 }

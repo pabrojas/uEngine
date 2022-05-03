@@ -10,7 +10,7 @@ using uEngine;
 
 namespace Selector.Scenes
 {
-    public class SelectionScene
+    public class SelectionScene : uScene
     {
         private int selection;
 
@@ -29,27 +29,32 @@ namespace Selector.Scenes
             ended = false;
         }
 
-        public void Initialize()
-        {
-            ended = false;
-            selection = 0;
-        }
-
-        public bool isEnded()
-        {
-            return ended;
-        }
-
         public int getSelection()
         {
             return selection;
         }
 
-        public void GameUpdate()
+        public bool IsAlive()
         {
+            return !ended;
         }
 
-        public void ProcessInput()
+        public uScene Next()
+        {
+            if(selection == 0)
+            {
+                return new Escena1();
+            }
+
+            if (selection == 1)
+            {
+                return new Escena2();
+            }
+
+            return new Escena3();
+        }
+
+        public void GameUpdate(int DeltaTime)
         {
             if (ended == false)
             {
@@ -92,10 +97,17 @@ namespace Selector.Scenes
             {
                 ended = true;
             }
-            }
+        }
+
+        public void ProcessInput()
+        {
+            
+        }
 
         public void Render(Graphics g)
         {
+            g.FillRectangle(new SolidBrush(Color.White), 0, 0, 1024, 738);
+
             //376, 141
 
             if (selection == 0)

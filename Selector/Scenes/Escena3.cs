@@ -9,22 +9,23 @@ using uEngine;
 
 namespace Selector.Scenes
 {
-    public class Escena3
+    public class Escena3 : uScene
     {
+
         private bool ended = false;
 
-        public void Initialize()
+        public void GameUpdate(int DeltaTime)
         {
-            ended = false;
         }
 
-        public bool isEnded()
+        public bool IsAlive()
         {
-            return ended;
+            return !ended;
         }
 
-        public void GameUpdate()
+        public uScene Next()
         {
+            return new SelectionScene();
         }
 
         public void ProcessInput()
@@ -37,6 +38,8 @@ namespace Selector.Scenes
 
         public void Render(Graphics g)
         {
+            g.FillRectangle(new SolidBrush(Color.White), 0, 0, 1024, 738);
+
             g.FillRectangle(new SolidBrush(Color.FromArgb(250, 196, 1)), 0, 0, 1024, 768);
         }
     }

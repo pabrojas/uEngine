@@ -9,27 +9,28 @@ using uEngine;
 
 namespace Selector.Scenes
 {
-    public class Escena1
+    public class Escena1 : uScene
     {
+
         private bool ended = false;
 
-        public void Initialize()
+        public void GameUpdate(int DeltaTime)
         {
-            ended = false;
         }
 
-        public bool isEnded()
+        public bool IsAlive()
         {
-            return ended;
+            return !ended;
         }
 
-        public void GameUpdate()
+        public uScene Next()
         {
+            return new SelectionScene();
         }
 
         public void ProcessInput()
         {
-            if( uInputManager.IsKeyPressed("Escape") )
+            if (uInputManager.IsKeyPressed("Escape"))
             {
                 ended = true;
             }
@@ -37,6 +38,8 @@ namespace Selector.Scenes
 
         public void Render(Graphics g)
         {
+            g.FillRectangle(new SolidBrush(Color.White), 0, 0, 1024, 738);
+
             g.FillRectangle(new SolidBrush(Color.FromArgb(219, 9, 114)), 0, 0, 1024, 768);
         }
     }
