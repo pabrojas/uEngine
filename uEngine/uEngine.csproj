@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uInputManager.cs" />
     <Compile Include="uKeyboardManager.cs" />
+    <Compile Include="uMouseManager.cs" />
     <Compile Include="uScene.cs" />
     <Compile Include="uSingleSprite.cs" />
     <Compile Include="uSprite.cs" />

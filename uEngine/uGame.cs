@@ -15,8 +15,6 @@ namespace uEngine
         private int TargetFPS;
         protected uWindow Window;
 
-        protected Point MouseLocation { get { return Window.MouseLocation; } }
-
         protected uScene CurrentScene { set; get; }
 
         protected int DeltaTime { private set; get; }
@@ -79,11 +77,6 @@ namespace uEngine
             Window.Show();
             Thread thread = new Thread(GameLoop);
             thread.Start();
-        }
-
-        public bool isMousePressed()
-        {
-            return Window.isMousePressed();
         }
 
         public abstract void ProcessInput();

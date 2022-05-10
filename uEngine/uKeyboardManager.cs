@@ -29,6 +29,18 @@ namespace uEngine
             return PressedKeys.Contains(code);
         }
 
+        public static List<string> GetPressed()
+        {
+            List<string> pressed = new List<string>();
+
+            foreach(Keys key in PressedKeys)
+            {
+                pressed.Add(key.ToString());
+            }
+
+            return pressed;
+        }
+
 
     }
 }

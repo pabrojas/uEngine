@@ -4,8 +4,7 @@ C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\bin\Debug\Animat
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\bin\Debug\uEngine.dll
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\bin\Debug\uEngine.pdb
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\obj\Debug\AnimationTest.csproj.AssemblyReference.cache
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\obj\Debug\AnimationTest.csproj.SuggestedBindingRedirects.cache
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\obj\Debug\AnimationTest.csproj.CoreCompileInputs.cache
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\obj\Debug\AnimationTest.csproj.CopyComplete
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\obj\Debug\AnimationTest.exe
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\obj\Debug\AnimationTest.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\AnimationTest\obj\Debug\AnimationTest.csproj.CopyComplete

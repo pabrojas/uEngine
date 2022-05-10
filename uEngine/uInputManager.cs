@@ -9,6 +9,9 @@ namespace uEngine
 {
     public class uInputManager
     {
+
+
+
         // Para mayor información de los nombres de las teclas revisar:
         // https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.keys?view=net-5.0 
         static public bool IsKeyPressed(string key)
@@ -17,6 +20,16 @@ namespace uEngine
             Keys code = (Keys)converter.ConvertFromString(key);
 
             return uKeyboardManager.IsPressed(code);
+        }
+
+        static public bool IsMouseButtonPressed(MouseButtons button)
+        {
+            return uMouseManager.IsPressed(button);
+        }
+
+        static public List<string> GetPressedKeys()
+        {
+            return uKeyboardManager.GetPressed();
         }
     }
 }
