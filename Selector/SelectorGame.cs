@@ -12,7 +12,7 @@ namespace Selector
 {
     public class SelectorGame : uGame
     {
-        public SelectorGame(int windowWidth, int windowHeight, int targetFPS) : base(windowWidth, windowHeight, targetFPS)
+        public SelectorGame(uViewport viewport, int windowWidth, int windowHeight, int targetFPS) : base(viewport, windowWidth, windowHeight, targetFPS)
         {
             CurrentScene = new SelectionScene();
         }

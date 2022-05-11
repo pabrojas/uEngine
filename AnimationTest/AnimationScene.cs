@@ -81,6 +81,13 @@ namespace AnimationTest
         {
             //416, 454
 
+            uBounds<double> worldBounds = new uBounds<double>(X, 100, 416, 454);
+
+            //uBounds<int> windowBounds = uConverter.Parse(worldBounds, )
+
+
+
+
             g.DrawImage(sprite.Current(), X, 100, 416, 454);
 
         }

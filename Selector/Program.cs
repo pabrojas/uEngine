@@ -19,7 +19,7 @@ namespace Selector
 
             uFontManager.Load("Kenney Rocket.ttf", "rocket");
 
-            SelectorGame game = new SelectorGame(1024, 768, 30);
+            SelectorGame game = new SelectorGame(new uViewport(400, 400, 800, 600), 1024, 768, 30);
             game.Start();
 
             Application.Run();

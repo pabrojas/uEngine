@@ -21,7 +21,7 @@ namespace AnimationTest
 
 
 
-            AnimationGame game = new AnimationGame(1024, 768, 30);
+            AnimationGame game = new AnimationGame(new uViewport(400, 400, 800, 600), 1024, 768, 30);
             game.Start();
 
             Application.Run();

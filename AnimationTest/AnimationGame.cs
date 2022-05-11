@@ -10,7 +10,7 @@ namespace AnimationTest
 {
     public class AnimationGame : uGame
     {
-        public AnimationGame(int windowWidth, int windowHeight, int targetFPS) : base(windowWidth, windowHeight, targetFPS)
+        public AnimationGame(uViewport viewport, int windowWidth, int windowHeight, int targetFPS) : base(viewport, windowWidth, windowHeight, targetFPS)
         {
             CurrentScene = new AnimationScene();
         }

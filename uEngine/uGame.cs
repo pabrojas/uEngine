@@ -14,14 +14,16 @@ namespace uEngine
 
         private int TargetFPS;
         protected uWindow Window;
+        protected uViewport Viewport;
 
         protected uScene CurrentScene { set; get; }
 
         protected int DeltaTime { private set; get; }
 
         
-        protected uGame(int windowWidth, int windowHeight, int targetFPS)
+        protected uGame(uViewport viewport, int windowWidth, int windowHeight, int targetFPS)
         {
+            this.Viewport = viewport;
             Window = new uWindow(windowWidth, windowHeight);
             TargetFPS = targetFPS;
         }
