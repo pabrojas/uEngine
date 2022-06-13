@@ -122,6 +122,7 @@ namespace uEngine
         }
 
         public abstract void ProcessInput();
+        
         public virtual void GameUpdate(int DeltaTime)
         {
             foreach(uGameObject ugo in GameObjects)

@@ -7,3 +7,4 @@ C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVe
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVentana.csproj.CoreCompileInputs.cache
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVentana.exe
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVentana.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVentana.csproj.CopyComplete

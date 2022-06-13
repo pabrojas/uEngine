@@ -1,0 +1,8 @@
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\PruebaGameObjects\obj\Debug\PruebaGameObjects.csproj.CoreCompileInputs.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\PruebaGameObjects\bin\Debug\PruebaGameObjects.exe.config
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\PruebaGameObjects\bin\Debug\PruebaGameObjects.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\PruebaGameObjects\bin\Debug\PruebaGameObjects.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\PruebaGameObjects\bin\Debug\uEngine.dll
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\PruebaGameObjects\bin\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\PruebaGameObjects\obj\Debug\PruebaGameObjects.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\PruebaGameObjects\obj\Debug\PruebaGameObjects.pdb

@@ -41,14 +41,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\uResourceIdDuplicatedException.cs" />
     <Compile Include="Exceptions\uResourceIdNotFoundException.cs" />
     <Compile Include="Exceptions\uResourceNotFoundException.cs" />
     <Compile Include="uAnimatedSprite.cs" />
+    <Compile Include="uBoundingBox.cs" />
     <Compile Include="uConverter.cs" />
     <Compile Include="uFontManager.cs" />
+    <Compile Include="uGameObject.cs" />
     <Compile Include="uImageManager.cs" />
     <Compile Include="uGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

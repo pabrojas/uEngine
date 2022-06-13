@@ -66,11 +66,17 @@ namespace uEngine
         {
             foreach (uBoundingBox bbox1 in BBoxes)
             {
-                Rect r1 = new Rect(bbox1.X, bbox1.Y, bbox1.Width, bbox1.Height);
+                Rect r1 = new Rect(
+                    X + bbox1.X, 
+                    Y + bbox1.Y, 
+                    bbox1.Width, bbox1.Height);
 
                 foreach (uBoundingBox bbox2 in ugo.BBoxes)
                 {
-                    Rect r2 = new Rect(bbox2.X, bbox2.Y, bbox2.Width, bbox2.Height);
+                    Rect r2 = new Rect(
+                        ugo.X + bbox2.X, 
+                        ugo.Y + bbox2.Y, 
+                        bbox2.Width, bbox2.Height);
 
                     if(r1.IntersectsWith(r2))
                     {

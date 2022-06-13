@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uEngine", "uEngine\uEngine.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IconoVentana", "IconoVentana\IconoVentana.csproj", "{449242E9-C423-46A0-8E08-F63270FFB84E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaGameObjects", "PruebaGameObjects\PruebaGameObjects.csproj", "{BBF6735B-7243-4346-85E9-7B128300A8AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{449242E9-C423-46A0-8E08-F63270FFB84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{449242E9-C423-46A0-8E08-F63270FFB84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{449242E9-C423-46A0-8E08-F63270FFB84E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF6735B-7243-4346-85E9-7B128300A8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF6735B-7243-4346-85E9-7B128300A8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF6735B-7243-4346-85E9-7B128300A8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF6735B-7243-4346-85E9-7B128300A8AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
