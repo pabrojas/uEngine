@@ -14,18 +14,58 @@ namespace uEngine
 
         private int TargetFPS;
         protected uWindow Window;
-        protected uViewport Viewport;
+        public uViewport Viewport { private set; get; }
+
+        public int WindowWidth { get { return Window.ClientSize.Width; } }
+        public int WindowHeight { get { return Window.ClientSize.Height; } }
 
         protected uScene CurrentScene { set; get; }
 
         protected int DeltaTime { private set; get; }
 
-        
+        protected List<uGameObject> GameObjects;
+
         protected uGame(uViewport viewport, int windowWidth, int windowHeight, int targetFPS)
         {
             this.Viewport = viewport;
             Window = new uWindow(windowWidth, windowHeight);
             TargetFPS = targetFPS;
+
+            GameObjects = new List<uGameObject>();
+        }
+
+        public void SetIcon(Image image)
+        {
+            Bitmap b = (Bitmap)image;
+            IntPtr pIcon = b.GetHicon();
+            Icon icon = Icon.FromHandle(pIcon);
+            this.Window.Icon = icon;
+            icon.Dispose();
+        }
+
+        public void ClearGameObjects()
+        {
+            GameObjects.Clear();
+        }
+
+        public void Add(uGameObject ugo)
+        {
+            GameObjects.Add(ugo);
+        }
+
+        public int CountGameObjects()
+        {
+            return GameObjects.Count;
+        }
+
+        public uGameObject GetGameObject(int i)
+        {
+            return GameObjects[i];
+        }
+
+        public void RemoveGameObject(int i)
+        {
+            GameObjects.RemoveAt(i);
         }
 
         private void GameLoop()
@@ -82,7 +122,17 @@ namespace uEngine
         }
 
         public abstract void ProcessInput();
-        public abstract void GameUpdate(int DeltaTime);
+        public virtual void GameUpdate(int DeltaTime)
+        {
+            foreach(uGameObject ugo in GameObjects)
+            {
+                if (ugo.Sprite != null)
+                {
+                    ugo.Sprite.Update(DeltaTime);
+                }
+            }
+        }
+
         public virtual void Render(Graphics g)
         {
             CurrentScene.Render(g);

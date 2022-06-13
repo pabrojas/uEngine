@@ -1,0 +1,9 @@
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\bin\Debug\IconoVentana.exe.config
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\bin\Debug\IconoVentana.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\bin\Debug\IconoVentana.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\bin\Debug\uEngine.dll
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\bin\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVentana.csproj.AssemblyReference.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVentana.csproj.CoreCompileInputs.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVentana.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\IconoVentana\obj\Debug\IconoVentana.pdb

@@ -1,9 +1,0 @@
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\bin\Debug\Arkanoid.exe.config
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\bin\Debug\Arkanoid.exe
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\bin\Debug\Arkanoid.pdb
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\bin\Debug\uEngine.dll
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\bin\Debug\uEngine.pdb
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\obj\Debug\Arkanoid.csproj.AssemblyReference.cache
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\obj\Debug\Arkanoid.csproj.CoreCompileInputs.cache
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\obj\Debug\Arkanoid.exe
-C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Arkanoid\obj\Debug\Arkanoid.pdb
