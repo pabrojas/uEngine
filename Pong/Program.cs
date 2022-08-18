@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uEngine
+namespace Pong
 {
     public class Program
     {
-        static public void Main(string[] args)
+        [STAThread]
+        static void Main(string[] args)
         {
-            uGame game = new uGame(1024, 768, 30);
+            PongGame game = new PongGame(1024, 768, 30);
             game.Start();
+
 
             Application.Run();
         }

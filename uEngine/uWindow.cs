@@ -18,7 +18,7 @@ namespace uEngine
         public uWindow(int clientWidth, int clientHeight)
         {
             pressedKeys = new List<Keys>();
-            
+
             ClientSize = new Size(clientWidth, clientHeight);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
@@ -45,23 +45,13 @@ namespace uEngine
 
         private void CustomKeyDown(object sender, KeyEventArgs e)
         {
-            Keys key = e.KeyCode;
-            if(!pressedKeys.Contains(key))
-            {
-                pressedKeys.Add(key);
-            }
+            uInputManager.KeyDown(e.KeyCode);
         }
         private void CustomKeyUp(object sender, KeyEventArgs e)
         {
-            if(pressedKeys.Contains(e.KeyCode))
-            {
-                pressedKeys.Remove(e.KeyCode);
-            }
-        }
-        public bool IsKeyPressed(Keys key)
-        {
-            return pressedKeys.Contains(key);
+            uInputManager.KeyUp(e.KeyCode);
         }
 
     }
 }
+

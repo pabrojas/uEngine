@@ -1,0 +1,11 @@
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\bin\Debug\Pong.exe.config
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\bin\Debug\Pong.exe
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\bin\Debug\Pong.pdb
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\bin\Debug\uEngine.dll
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\bin\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\obj\Debug\Pong.csproj.AssemblyReference.cache
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\obj\Debug\Pong.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\obj\Debug\Pong.csproj.CoreCompileInputs.cache
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\obj\Debug\Pong.csproj.CopyComplete
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\obj\Debug\Pong.exe
+C:\Users\Pablo Rojas\Desktop\NuevaVersion\uEngine\Pong\obj\Debug\Pong.pdb

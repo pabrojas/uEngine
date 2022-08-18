@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
-// asociada con un ensamblado.
-[assembly: AssemblyTitle("uEngine")]
+// asociada a un ensamblado.
+[assembly: AssemblyTitle("Pong")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("uEngine")]
+[assembly: AssemblyProduct("Pong")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("a532b342-d630-4f0a-8820-87099db1b335")]
+[assembly: Guid("2b05c930-a1b4-42bc-99e5-49b1165a1ddf")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
