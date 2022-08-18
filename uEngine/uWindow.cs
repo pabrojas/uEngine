@@ -12,6 +12,9 @@ namespace uEngine
     {
         private List<Keys> pressedKeys;
 
+        private BufferedGraphicsContext GraphicManager;
+        private BufferedGraphics ManagedBackBuffer;
+
         public uWindow(int clientWidth, int clientHeight)
         {
             pressedKeys = new List<Keys>();
@@ -20,10 +23,24 @@ namespace uEngine
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
 
+            GraphicManager = BufferedGraphicsManager.Current;
+            GraphicManager.MaximumBuffer = new Size(clientWidth + 1, clientHeight + 1);
+            ManagedBackBuffer = GraphicManager.Allocate(CreateGraphics(), ClientRectangle);
+
             KeyDown += CustomKeyDown;
             KeyUp += CustomKeyUp;
 
+        }
 
+        public Graphics GetGraphics()
+        {
+            ManagedBackBuffer.Graphics.Clear(Color.Black);
+            return ManagedBackBuffer.Graphics;
+        }
+
+        public void Render()
+        {
+            ManagedBackBuffer.Render();
         }
 
         private void CustomKeyDown(object sender, KeyEventArgs e)
