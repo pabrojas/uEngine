@@ -26,7 +26,7 @@ namespace Pong
         private bool PlayerWon;
         private bool ComputerWon;
 
-        public PongGame(int windowWidth, int windowHeight, int FPS) : base(windowWidth, windowWidth, FPS)
+        public PongGame(int windowWidth, int windowHeight, int FPS) : base(windowWidth, windowHeight, FPS)
         {
             courtWidth = (int)(windowWidth * 0.9);
             courtHeight = (int)(windowHeight * 0.9);

@@ -34,7 +34,7 @@ namespace Pong.Model
             Generator = new Random();
             InitiaizeDeltas();
 
-            WinningPoints = 1;
+            WinningPoints = 5;
 
             PadSpeed = 5;
             PlayerPad = new Rectangle(20, CourtHeight / 2 - 50, 20, 100);
@@ -48,7 +48,7 @@ namespace Pong.Model
 
         }
 
-        public void InitiaizeDeltas()
+        private void InitiaizeDeltas()
         {
             dx = Generator.Next(0, 2);
             if (dx == 0)
@@ -151,11 +151,15 @@ namespace Pong.Model
             {
                 dx = 1;
                 ComputerPoints++;
+                Ball = new Rectangle(CourtWidth / 2, CourtHeight / 2, 20, 20);
+                InitiaizeDeltas();
             }
             else if (Ball.X + Ball.Width > CourtWidth)
             {
                 dx = -1;
                 PlayerPoints++;
+                Ball = new Rectangle(CourtWidth / 2, CourtHeight / 2, 20, 20);
+                InitiaizeDeltas();
             }
 
 

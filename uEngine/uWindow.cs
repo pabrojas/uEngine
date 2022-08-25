@@ -10,14 +10,12 @@ namespace uEngine
 {
     public class uWindow : Form
     {
-        private List<Keys> pressedKeys;
 
         private BufferedGraphicsContext GraphicManager;
         private BufferedGraphics ManagedBackBuffer;
 
         public uWindow(int clientWidth, int clientHeight)
         {
-            pressedKeys = new List<Keys>();
 
             ClientSize = new Size(clientWidth, clientHeight);
             FormBorderStyle = FormBorderStyle.FixedSingle;

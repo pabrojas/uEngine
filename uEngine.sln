@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uEngine", "uEngine\uEngine.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pong", "Pong\Pong.csproj", "{2B05C930-A1B4-42BC-99E5-49B1165A1DDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breakout", "Breakout\Breakout.csproj", "{BFD0B5B3-0A71-475E-98BA-1F32FFCD1E34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2B05C930-A1B4-42BC-99E5-49B1165A1DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B05C930-A1B4-42BC-99E5-49B1165A1DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B05C930-A1B4-42BC-99E5-49B1165A1DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD0B5B3-0A71-475E-98BA-1F32FFCD1E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD0B5B3-0A71-475E-98BA-1F32FFCD1E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD0B5B3-0A71-475E-98BA-1F32FFCD1E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD0B5B3-0A71-475E-98BA-1F32FFCD1E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

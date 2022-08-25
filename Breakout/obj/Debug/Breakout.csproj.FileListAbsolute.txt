@@ -1,0 +1,11 @@
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\bin\Debug\Breakout.exe.config
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\bin\Debug\Breakout.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\bin\Debug\Breakout.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\bin\Debug\uEngine.dll
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\bin\Debug\uEngine.pdb
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.csproj.AssemblyReference.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.csproj.CoreCompileInputs.cache
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.csproj.CopyComplete
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.exe
+C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.pdb
