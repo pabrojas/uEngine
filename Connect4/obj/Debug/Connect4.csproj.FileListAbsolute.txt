@@ -1,0 +1,11 @@
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\Connect4.exe.config
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\Connect4.exe
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\Connect4.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\uEngine.dll
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\uEngine.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.csproj.AssemblyReference.cache
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.csproj.SuggestedBindingRedirects.cache
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.csproj.CoreCompileInputs.cache
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.csproj.CopyComplete
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.exe
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.pdb

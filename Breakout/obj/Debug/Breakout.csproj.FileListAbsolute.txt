@@ -9,3 +9,14 @@ C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.cs
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.csproj.CopyComplete
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.exe
 C:\Users\Pablo Rojas\Desktop\Repositorios\uEngine\Breakout\obj\Debug\Breakout.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\bin\Debug\Breakout.exe.config
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\bin\Debug\Breakout.exe
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\bin\Debug\Breakout.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\bin\Debug\uEngine.dll
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\bin\Debug\uEngine.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\obj\Debug\Breakout.csproj.AssemblyReference.cache
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\obj\Debug\Breakout.csproj.SuggestedBindingRedirects.cache
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\obj\Debug\Breakout.csproj.CoreCompileInputs.cache
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\obj\Debug\Breakout.csproj.CopyComplete
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\obj\Debug\Breakout.exe
+C:\Users\pabro\Documents\GitHub\uEngine\Breakout\obj\Debug\Breakout.pdb
