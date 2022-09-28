@@ -15,8 +15,8 @@ namespace Connect4.View
     public class Connect4Game : uGame
     {
         private Connect4Model Board;
-        private bool PlayerTurn;
         private int SelectedColumn;
+        private bool PlayerTurn;
 
         private bool PreviouslyPressedRight;
         private bool PreviouslyPressedLeft;
@@ -26,11 +26,18 @@ namespace Connect4.View
         private int DroppingYStart;
         private int DroppingYEnd;
 
+        private Random Generator;
+        private int CpuTargetColumn;
+        private int TotalTime;
+
         public Connect4Game(int windowWidth, int windowHeight, int FPS) : base(windowWidth, windowHeight, FPS)
         {
             Board = new Connect4Model();
+            Generator = new Random();
             PlayerTurn = true;
             SelectedColumn = 0;
+
+            TotalTime = 0;
 
             PreviouslyPressedRight = false;
             PreviouslyPressedLeft = false;
@@ -41,14 +48,41 @@ namespace Connect4.View
 
         public override void GameUpdate()
         {
-            if( Dropping == true )
+            if (PlayerTurn == true)
             {
-                DroppingYStart += 40;
-
-                if (DroppingYStart >= DroppingYEnd)
+                if (Dropping == true)
                 {
-                    Board.Drop(Token.Red, SelectedColumn);
-                    Dropping = false;
+                    DroppingYStart += 40;
+
+                    if (DroppingYStart >= DroppingYEnd)
+                    {
+                        Board.Drop(Token.Red, SelectedColumn);
+                        Dropping = false;
+
+                        PlayerTurn = false;
+
+                        CpuTargetColumn = 6; // Generator.Next(7);
+                    }
+                }
+            }
+            else
+            {
+                TotalTime += DeltaTime;
+                if (TotalTime > 100)
+                {
+                    if (SelectedColumn < CpuTargetColumn)
+                    {
+                        SelectedColumn++;
+                    }
+                    else if (CpuTargetColumn < SelectedColumn)
+                    {
+                        SelectedColumn--;
+                    }
+                    else
+                    {
+
+                    }
+                    TotalTime = 0;
                 }
             }
         }
@@ -97,13 +131,16 @@ namespace Connect4.View
                 {
                     if (PreviouslyPressedEnter == false)
                     {
-                        if (Board.HasAvailableSpace(SelectedColumn))
+                        if (PlayerTurn == true)
                         {
-                            //Board.Drop(Token.Red, SelectedColumn);
-                            int targetRow = Board.GetFreeRow(SelectedColumn);
-                            Dropping = true;
-                            DroppingYStart = 900 - 639 - 50 + 27 - 150;
-                            DroppingYEnd = 900 - 639 - 50 + 27 + targetRow * 99;
+                            if (Board.HasAvailableSpace(SelectedColumn))
+                            {
+                                //Board.Drop(Token.Red, SelectedColumn);
+                                int targetRow = Board.GetFreeRow(SelectedColumn);
+                                Dropping = true;
+                                DroppingYStart = 900 - 639 - 50 + 27 - 150;
+                                DroppingYEnd = 900 - 639 - 50 + 27 + targetRow * 99;
+                            }
                         }
                         PreviouslyPressedEnter = true;
                     }
@@ -151,6 +188,10 @@ namespace Connect4.View
                 if (PlayerTurn == true)
                 {
                     g.DrawImage(red, xToken00 + SelectedColumn * 99, yToken00 - 150, 90, 90);
+                }
+                else
+                {
+                    g.DrawImage(yellow, xToken00 + SelectedColumn * 99, yToken00 - 150, 90, 90);
                 }
             }
 

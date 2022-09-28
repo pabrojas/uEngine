@@ -16,7 +16,7 @@ namespace uEngine.Managers
         static private Dictionary<string, MemoryStream> AudioMap = new Dictionary<string, MemoryStream>();
 
         static private int PlayingIndex = 0;
-        static public Dictionary<int, WaveOutEvent> PlayingAudioMap = new Dictionary<int, WaveOutEvent>();
+        static private Dictionary<int, WaveOutEvent> PlayingAudioMap = new Dictionary<int, WaveOutEvent>();
 
 
         public static void Load(string filaname, string id)
@@ -58,6 +58,34 @@ namespace uEngine.Managers
             }
 
             throw new uResourceIdNotFoundException(id);
+        }
+
+        static public void Stop(int playingId)
+        {
+            if(PlayingAudioMap.ContainsKey(playingId))
+            {
+                WaveOutEvent player = PlayingAudioMap[playingId];
+                player.Stop();
+                PlayingAudioMap.Remove(playingId);
+            }
+        }
+
+        static public void Pause(int playingId)
+        {
+            if (PlayingAudioMap.ContainsKey(playingId))
+            {
+                WaveOutEvent player = PlayingAudioMap[playingId];
+                player.Pause();
+            }
+        }
+
+        static public void Resume(int playingId)
+        {
+            if (PlayingAudioMap.ContainsKey(playingId))
+            {
+                WaveOutEvent player = PlayingAudioMap[playingId];
+                player.Play();
+            }
         }
 
     }

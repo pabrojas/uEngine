@@ -20,6 +20,9 @@ namespace uEngine
         public static int WindowWidth { get; private set; }
         public static int WindowHeight { get; private set; }
 
+        public static int DeltaTime;
+
+
         public uGame(int windowWidth, int windowHeight, int FPS)
         {
             targetTime = 1000 / FPS;
@@ -27,6 +30,8 @@ namespace uEngine
 
             WindowWidth = windowWidth;
             WindowHeight = windowHeight;
+
+            DeltaTime = 0;
         }
 
         public void Start()
@@ -52,8 +57,8 @@ namespace uEngine
 
                 sw.Stop();
 
-                int deltaTime = (int)sw.ElapsedMilliseconds;
-                int sleepTime = targetTime - deltaTime;
+                DeltaTime = (int)sw.ElapsedMilliseconds;
+                int sleepTime = targetTime - DeltaTime;
 
                 if (sleepTime < 0)
                 {
