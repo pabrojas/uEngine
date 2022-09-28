@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using uEngine;
+using uEngine.Managers;
 
 namespace Connect4.View
 {
@@ -42,7 +43,7 @@ namespace Connect4.View
         {
             if( Dropping == true )
             {
-                DroppingYStart += 10;
+                DroppingYStart += 40;
 
                 if (DroppingYStart >= DroppingYEnd)
                 {
@@ -60,6 +61,7 @@ namespace Connect4.View
                 {
                     if (PreviouslyPressedRight == false)
                     {
+                        uAudioPool.Play("bong");
                         SelectedColumn++;
                         if (SelectedColumn > 6)
                         {
@@ -77,6 +79,7 @@ namespace Connect4.View
                 {
                     if (PreviouslyPressedLeft == false)
                     {
+                        uAudioPool.Play("bong");
                         SelectedColumn--;
                         if (SelectedColumn < 0)
                         {
@@ -120,8 +123,8 @@ namespace Connect4.View
             int xToken00 = 50 + 27;
             int yToken00 = 900 - 639 - 50 + 27;
 
-            Image red = uImageManager.Get("red");
-            Image yellow = uImageManager.Get("yellow");
+            Image red = uResourcesManager.GetImage("red");
+            Image yellow = uResourcesManager.GetImage("yellow");
 
             for (int i = 0; i < 6; i++)
             {
@@ -152,7 +155,7 @@ namespace Connect4.View
             }
 
             //738x639
-            Image board = uImageManager.Get("board");
+            Image board = uResourcesManager.GetImage("board");
             g.DrawImage(board, 50, 900 - 639 - 50, 738, 639);
 
             

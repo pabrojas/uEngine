@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using uEngine;
 using Connect4.View;
+using uEngine.Managers;
 
 namespace Connect4
 {
@@ -14,9 +14,11 @@ namespace Connect4
     {
         static void Main(string[] args)
         {
-            uImageManager.Load("Board.png", "board");
-            uImageManager.Load("TokenRed.png", "red");
-            uImageManager.Load("TokenYellow.png", "yellow");
+            uResourcesManager.LoadImage("Board.png", "board");
+            uResourcesManager.LoadImage("TokenRed.png", "red");
+            uResourcesManager.LoadImage("TokenYellow.png", "yellow");
+
+            uAudioPool.Load("bong_001.mp3", "bong");
 
             Connect4Game game = new Connect4Game(1300, 900, 60);
             game.Start();

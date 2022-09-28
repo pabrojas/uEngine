@@ -9,3 +9,8 @@ C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.csproj.CoreC
 C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.csproj.CopyComplete
 C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.exe
 C:\Users\pabro\Documents\GitHub\uEngine\Connect4\obj\Debug\Connect4.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\NAudio.WinMM.dll
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\NAudio.Wasapi.dll
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\NAudio.Core.dll
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\pabro\Documents\GitHub\uEngine\Connect4\bin\Debug\Microsoft.Win32.Registry.xml

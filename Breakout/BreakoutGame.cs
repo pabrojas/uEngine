@@ -77,7 +77,7 @@ namespace Breakout
 
 
             //Image paddle = Image.FromFile(@"C:\Users\Pablo Rojas\Downloads\png\paddleBlu.png");
-            Image paddle = uImageManager.Get("PlayerPad");
+            Image paddle = uImagePool.Get("PlayerPad");
             g.DrawImage(paddle, game.PlayerPad.X + xOffset,
                 game.PlayerPad.Y + yOffset,
                 game.PlayerPad.Width,
@@ -88,7 +88,7 @@ namespace Breakout
             //pinto los bloques
             foreach (Block block in game.Blocks)
             {
-                Image brick = uImageManager.Get(block.Background);
+                Image brick = uImagePool.Get(block.Background);
                 g.DrawImage(brick,
                     block.Bounds.X + xOffset,
                     block.Bounds.Y + yOffset,

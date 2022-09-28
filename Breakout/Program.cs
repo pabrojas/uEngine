@@ -15,9 +15,9 @@ namespace Breakout
         static void Main(string[] args)
         {
             //Cargo mis recursos externos
-            uImageManager.Load("paddleBlu.png", "PlayerPad");
-            uImageManager.Load("element_blue_rectangle.png", "BrickBlue");
-            uImageManager.Load("element_red_rectangle.png", "BrickRed");
+            uImagePool.Load("paddleBlu.png", "PlayerPad");
+            uImagePool.Load("element_blue_rectangle.png", "BrickBlue");
+            uImagePool.Load("element_red_rectangle.png", "BrickRed");
 
 
 
