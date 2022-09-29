@@ -18,5 +18,17 @@ namespace uEngine.Managers
         {
             return uImagePool.Get(imageId);
         }
+
+        public static void LoadFont(string filename, string fontId)
+        {
+            uFontPool.Load(filename, fontId);
+        }
+
+        public static Font GetFont(string fontId, int size)
+        {
+            return uFontPool.Get(fontId, size);
+        }
+
+
     }
 }

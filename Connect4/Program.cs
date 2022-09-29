@@ -20,6 +20,8 @@ namespace Connect4
 
             uAudioPool.Load("bong_001.mp3", "bong");
 
+            uResourcesManager.LoadFont("Kenney Future.ttf", "font");
+
             Connect4Game game = new Connect4Game(1300, 900, 60);
             game.Start();
 

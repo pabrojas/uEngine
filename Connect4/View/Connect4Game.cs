@@ -61,93 +61,120 @@ namespace Connect4.View
 
                         PlayerTurn = false;
 
-                        CpuTargetColumn = 6; // Generator.Next(7);
+                        int target;
+                        do
+                        {
+                            target = Generator.Next(7);
+                        }
+                        while (!Board.HasAvailableSpace(target));
+
+                        CpuTargetColumn = target;
                     }
                 }
             }
             else
             {
-                TotalTime += DeltaTime;
-                if (TotalTime > 100)
+                if (Dropping == false)
                 {
-                    if (SelectedColumn < CpuTargetColumn)
+                    TotalTime += DeltaTime;
+                    if (TotalTime > 100)
                     {
-                        SelectedColumn++;
+                        if (SelectedColumn < CpuTargetColumn)
+                        {
+                            SelectedColumn++;
+                        }
+                        else if (CpuTargetColumn < SelectedColumn)
+                        {
+                            SelectedColumn--;
+                        }
+                        else
+                        {
+                            int targetRow = Board.GetFreeRow(SelectedColumn);
+                            Dropping = true;
+                            DroppingYStart = 900 - 639 - 50 + 27 - 150;
+                            DroppingYEnd = 900 - 639 - 50 + 27 + targetRow * 99;
+                        }
+                        TotalTime = 0;
                     }
-                    else if (CpuTargetColumn < SelectedColumn)
-                    {
-                        SelectedColumn--;
-                    }
-                    else
-                    {
+                }
+                else
+                {
+                    DroppingYStart += 40;
 
+                    if (DroppingYStart >= DroppingYEnd)
+                    {
+                        Board.Drop(Token.Yellow, SelectedColumn);
+                        Dropping = false;
+                        PlayerTurn = true;
                     }
-                    TotalTime = 0;
                 }
             }
         }
 
         public override void ProcessInputs()
-        {
-            if (Dropping == false)
+        { 
+            if (PlayerTurn == true)
             {
-                if (uInputManager.IsKeyPressed(Keys.Right))
-                {
-                    if (PreviouslyPressedRight == false)
-                    {
-                        uAudioPool.Play("bong");
-                        SelectedColumn++;
-                        if (SelectedColumn > 6)
-                        {
-                            SelectedColumn = 6;
-                        }
-                        PreviouslyPressedRight = true;
-                    }
-                }
-                else
-                {
-                    PreviouslyPressedRight = false;
-                }
 
-                if (uInputManager.IsKeyPressed(Keys.Left))
+                if (Dropping == false)
                 {
-                    if (PreviouslyPressedLeft == false)
+                    if (uInputManager.IsKeyPressed(Keys.Right))
                     {
-                        uAudioPool.Play("bong");
-                        SelectedColumn--;
-                        if (SelectedColumn < 0)
+                        if (PreviouslyPressedRight == false)
                         {
-                            SelectedColumn = 0;
-                        }
-                        PreviouslyPressedLeft = true;
-                    }
-                }
-                else
-                {
-                    PreviouslyPressedLeft = false;
-                }
-
-                if (uInputManager.IsKeyPressed(Keys.Enter))
-                {
-                    if (PreviouslyPressedEnter == false)
-                    {
-                        if (PlayerTurn == true)
-                        {
-                            if (Board.HasAvailableSpace(SelectedColumn))
+                            uAudioPool.Play("bong");
+                            SelectedColumn++;
+                            if (SelectedColumn > 6)
                             {
-                                //Board.Drop(Token.Red, SelectedColumn);
-                                int targetRow = Board.GetFreeRow(SelectedColumn);
-                                Dropping = true;
-                                DroppingYStart = 900 - 639 - 50 + 27 - 150;
-                                DroppingYEnd = 900 - 639 - 50 + 27 + targetRow * 99;
+                                SelectedColumn = 6;
                             }
+                            PreviouslyPressedRight = true;
                         }
-                        PreviouslyPressedEnter = true;
                     }
-                }
-                else
-                {
-                    PreviouslyPressedEnter = false;
+                    else
+                    {
+                        PreviouslyPressedRight = false;
+                    }
+
+                    if (uInputManager.IsKeyPressed(Keys.Left))
+                    {
+                        if (PreviouslyPressedLeft == false)
+                        {
+                            uAudioPool.Play("bong");
+                            SelectedColumn--;
+                            if (SelectedColumn < 0)
+                            {
+                                SelectedColumn = 0;
+                            }
+                            PreviouslyPressedLeft = true;
+                        }
+                    }
+                    else
+                    {
+                        PreviouslyPressedLeft = false;
+                    }
+
+                    if (uInputManager.IsKeyPressed(Keys.Enter))
+                    {
+                        if (PreviouslyPressedEnter == false)
+                        {
+                            if (PlayerTurn == true)
+                            {
+                                if (Board.HasAvailableSpace(SelectedColumn))
+                                {
+                                    int targetRow = Board.GetFreeRow(SelectedColumn);
+                                    Dropping = true;
+                                    DroppingYStart = 900 - 639 - 50 + 27 - 150;
+                                    DroppingYEnd = 900 - 639 - 50 + 27 + targetRow * 99;
+                                }
+                            }
+                            PreviouslyPressedEnter = true;
+                        }
+                    }
+                    else
+                    {
+                        PreviouslyPressedEnter = false;
+                    }
                 }
             }
         }
@@ -181,7 +208,14 @@ namespace Connect4.View
 
             if (Dropping == true)
             {
-                g.DrawImage(red, xToken00 + SelectedColumn * 99, DroppingYStart, 90, 90);
+                if (PlayerTurn == true)
+                {
+                    g.DrawImage(red, xToken00 + SelectedColumn * 99, DroppingYStart, 90, 90);
+                }
+                else
+                {
+                    g.DrawImage(yellow, xToken00 + SelectedColumn * 99, DroppingYStart, 90, 90);
+                }
             }
             else
             {
@@ -199,7 +233,9 @@ namespace Connect4.View
             Image board = uResourcesManager.GetImage("board");
             g.DrawImage(board, 50, 900 - 639 - 50, 738, 639);
 
-            
+
+            Font font = uResourcesManager.GetFont("font", 32);
+            g.DrawString("Texto", font, new SolidBrush(Color.Black), 100, 100);
 
 
 
