@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breakout", "Breakout\Breako
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4", "Connect4\Connect4.csproj", "{4961C0A7-1F68-4435-B939-32E0C1809416}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplashScreen", "SplashScreen\SplashScreen.csproj", "{ACF4F32A-7968-493D-8403-6C94027377B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4961C0A7-1F68-4435-B939-32E0C1809416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4961C0A7-1F68-4435-B939-32E0C1809416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4961C0A7-1F68-4435-B939-32E0C1809416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF4F32A-7968-493D-8403-6C94027377B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF4F32A-7968-493D-8403-6C94027377B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF4F32A-7968-493D-8403-6C94027377B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF4F32A-7968-493D-8403-6C94027377B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

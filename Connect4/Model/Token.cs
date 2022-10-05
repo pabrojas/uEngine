@@ -8,6 +8,6 @@ namespace Connect4.Model
 {
     public enum Token
     {
-        Empty, Red, Yellow
+        Empty, Red, Yellow, Glow
     }
 }

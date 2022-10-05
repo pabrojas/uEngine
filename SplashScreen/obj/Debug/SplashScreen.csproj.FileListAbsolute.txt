@@ -1,0 +1,16 @@
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\SplashScreen.exe.config
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\SplashScreen.exe
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\SplashScreen.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\uEngine.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\NAudio.WinMM.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\NAudio.Wasapi.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\NAudio.Core.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\uEngine.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\obj\Debug\SplashScreen.csproj.AssemblyReference.cache
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\obj\Debug\SplashScreen.csproj.SuggestedBindingRedirects.cache
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\obj\Debug\SplashScreen.csproj.CoreCompileInputs.cache
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\obj\Debug\SplashScreen.csproj.CopyComplete
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\obj\Debug\SplashScreen.exe
+C:\Users\pabro\Documents\GitHub\uEngine\SplashScreen\obj\Debug\SplashScreen.pdb

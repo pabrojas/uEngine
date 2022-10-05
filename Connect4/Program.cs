@@ -17,10 +17,13 @@ namespace Connect4
             uResourcesManager.LoadImage("Board.png", "board");
             uResourcesManager.LoadImage("TokenRed.png", "red");
             uResourcesManager.LoadImage("TokenYellow.png", "yellow");
+            uResourcesManager.LoadImage("logo.png", "logo");
 
             uAudioPool.Load("bong_001.mp3", "bong");
 
             uResourcesManager.LoadFont("Kenney Future.ttf", "font");
+            uResourcesManager.LoadFont("Kenney Blocks.ttf", "blocks");
+            uResourcesManager.LoadFont("Kenney Rocket.ttf", "rocket");
 
             Connect4Game game = new Connect4Game(1300, 900, 60);
             game.Start();

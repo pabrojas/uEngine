@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4961C0A7-1F68-4435-B939-32E0C1809416}</ProjectGuid>
+    <ProjectGuid>{ACF4F32A-7968-493D-8403-6C94027377B7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Connect4</RootNamespace>
-    <AssemblyName>Connect4</AssemblyName>
+    <RootNamespace>SplashScreen</RootNamespace>
+    <AssemblyName>SplashScreen</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,13 +48,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Connect4Model.cs" />
-    <Compile Include="Model\Token.cs" />
+    <Compile Include="MyGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scenes\GameScene.cs" />
-    <Compile Include="Scenes\SplashScene.cs" />
-    <Compile Include="View\Connect4Game.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
