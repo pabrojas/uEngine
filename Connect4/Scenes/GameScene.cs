@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using uEngine.Managers;
 using uEngine;
+using uEngine.Scenes;
 
 namespace Connect4.Scenes
 {
-    public class GameScene
+    public class GameScene : uScene
     {
         private Connect4Model Board;
         private int SelectedColumn;
@@ -33,6 +34,8 @@ namespace Connect4.Scenes
         private int MaxTime;
         private List<Color> Colors;
         private int Index;
+
+        private int winner;
 
 
         public GameScene()
@@ -62,8 +65,12 @@ namespace Connect4.Scenes
             Colors.Add(Color.Moccasin);
             Index = 0;
 
+        }
 
 
+        public int getWinner()
+        {
+            return winner;
         }
 
         public void GameUpdate(int DeltaTime)
@@ -95,7 +102,8 @@ namespace Connect4.Scenes
                         //Si alguien ganó, fue el player
                         if (Board.hasWon(row, SelectedColumn) == true)
                         {
-                            Board.Glow(row, SelectedColumn);
+                            uSceneManager.SetActive("Ending");
+                            winner = 1;
                         }
 
 
@@ -151,7 +159,8 @@ namespace Connect4.Scenes
                         //Si alguien ganó, fue el compu
                         if (Board.hasWon(row, SelectedColumn) == true)
                         {
-                            Console.WriteLine("Gana el CPU");
+                            uSceneManager.SetActive("Ending");
+                            winner = 2;
                         }
 
                     }

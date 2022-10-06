@@ -10,54 +10,34 @@ using System.Windows.Forms;
 
 using uEngine;
 using uEngine.Managers;
+using uEngine.Scenes;
 
 namespace Connect4.View
 {
     public class Connect4Game : uGame
     {
-        private GameScene game;
-        private SplashScene splash;
-
-        int scene;
-
         public Connect4Game(int windowWidth, int windowHeight, int FPS) : base(windowWidth, windowHeight, FPS)
         {
-            game = new GameScene();
-            splash = new SplashScene();
-            scene = 0;
+            uSceneManager.Register(new GameScene(), "GamePlay");
+            uSceneManager.Register(new SplashScene(), "SplashScreen");
+            uSceneManager.Register(new FinishScene(), "Ending");
+
+            uSceneManager.SetActive("SplashScreen");
         }
 
         public override void GameUpdate()
         {
-            switch (scene)
-            {
-                case 0: 
-                    splash.GameUpdate(DeltaTime);  
-                    if( splash.IsEnded() )
-                    {
-                        scene = 1;
-                    }
-                    break;
-                case 1: game.GameUpdate(DeltaTime);  break;
-            }
+            uSceneManager.GetActive().GameUpdate(DeltaTime);
         }
 
         public override void ProcessInputs()
         {
-            switch (scene)
-            {
-                case 0: splash.ProcessInputs(); break;
-                case 1: game.ProcessInputs(); break;
-            }
+            uSceneManager.GetActive().ProcessInputs();
         }
 
         public override void Render(Graphics g)
         {
-            switch (scene)
-            {
-                case 0: splash.Render(g); break;
-                case 1: game.Render(g); break;
-            }
+            uSceneManager.GetActive().Render(g);
         }
     }
 }

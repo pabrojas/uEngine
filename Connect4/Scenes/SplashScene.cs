@@ -7,28 +7,21 @@ using System.Text;
 using System.Threading.Tasks;
 using uEngine.Managers;
 using uEngine;
+using uEngine.Scenes;
 
 namespace Connect4.Scenes
 {
-    public class SplashScene
+    public class SplashScene : uScene
     {
         private float alpha;
         private int stage;
         private long time;
-
-        private bool ended;
 
         public SplashScene()
         {
             alpha = 0;
             stage = 0;
             time = 0;
-            ended = false;
-        }
-
-        public bool IsEnded()
-        {
-            return ended;
         }
 
         public void GameUpdate(int DeltaTime)
@@ -87,7 +80,7 @@ namespace Connect4.Scenes
                 time += DeltaTime;
                 if (time > 200)
                 {
-                    ended = true;
+                    uSceneManager.SetActive("GamePlay");
                 }
             }
 

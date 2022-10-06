@@ -52,6 +52,7 @@
     <Compile Include="Model\Token.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\FinishScene.cs" />
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Scenes\SplashScene.cs" />
     <Compile Include="View\Connect4Game.cs" />
