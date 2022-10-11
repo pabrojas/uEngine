@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4", "Connect4\Connec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplashScreen", "SplashScreen\SplashScreen.csproj", "{ACF4F32A-7968-493D-8403-6C94027377B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SceneTest", "SceneTest\SceneTest.csproj", "{A1979DE3-7A12-4516-8C52-5CD666BFE876}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{ACF4F32A-7968-493D-8403-6C94027377B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACF4F32A-7968-493D-8403-6C94027377B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACF4F32A-7968-493D-8403-6C94027377B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1979DE3-7A12-4516-8C52-5CD666BFE876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1979DE3-7A12-4516-8C52-5CD666BFE876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1979DE3-7A12-4516-8C52-5CD666BFE876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1979DE3-7A12-4516-8C52-5CD666BFE876}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

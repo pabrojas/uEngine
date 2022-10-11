@@ -1,0 +1,16 @@
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\SceneTest.exe.config
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\SceneTest.exe
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\SceneTest.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\uEngine.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\NAudio.WinMM.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\NAudio.Wasapi.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\NAudio.Core.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\uEngine.pdb
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\obj\Debug\SceneTest.csproj.AssemblyReference.cache
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\obj\Debug\SceneTest.csproj.SuggestedBindingRedirects.cache
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\obj\Debug\SceneTest.csproj.CoreCompileInputs.cache
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\obj\Debug\SceneTest.csproj.CopyComplete
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\obj\Debug\SceneTest.exe
+C:\Users\pabro\Documents\GitHub\uEngine\SceneTest\obj\Debug\SceneTest.pdb

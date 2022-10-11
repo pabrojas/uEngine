@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using uEngine.Scenes;
 
 namespace uEngine
 {
@@ -76,9 +77,20 @@ namespace uEngine
         }
 
 
-        public abstract void ProcessInputs();
-        public abstract void GameUpdate();
-        public abstract void Render(Graphics g);
+        public virtual void ProcessInputs()
+        {
+            uSceneManager.GetActive().ProcessInputs();
+        }
+        
+        public virtual void GameUpdate()
+        {
+            uSceneManager.GetActive().GameUpdate(DeltaTime);
+        }
+        
+        public virtual void Render(Graphics g)
+        {
+            uSceneManager.GetActive().Render(g);
+        }
 
     }
 }
