@@ -110,7 +110,7 @@ namespace SceneTest
             }
 
             
-            g.DrawString("Menú 1", menuFont, new SolidBrush(m1), x, y);
+            g.DrawString("set keys", menuFont, new SolidBrush(m1), x, y);
             g.DrawString("Menú 2", menuFont, new SolidBrush(m2), x, y + 50);
             g.DrawString("Menú 3", menuFont, new SolidBrush(m3), x, y + 100);
             g.DrawString("Menú 4", menuFont, new SolidBrush(m4), x, y + 150);

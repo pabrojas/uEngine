@@ -29,5 +29,16 @@ namespace uEngine
         {
             return TeclasPresionadas.Contains(key);
         }
+
+
+        public static Keys? GetKeyPressed()
+        {
+            if( TeclasPresionadas.Count > 0 )
+            {
+                return TeclasPresionadas.First();
+            }
+
+            return null;
+        }
     }
 }
