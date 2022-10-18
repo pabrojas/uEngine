@@ -14,8 +14,10 @@ namespace SceneTest
         [STAThread]
         static void Main(string[] args)
         {
+            uResourcesManager.LoadFont("Kenney Blocks.ttf", "title-font");
             uResourcesManager.LoadFont("Kenney Future.ttf", "menu-font");
-            //uResourcesManager.LoadFont("Kenney Blocks.ttf", "title-font");
+            uResourcesManager.LoadFont("Kenney Mini.ttf", "mini");
+            uResourcesManager.LoadFont("Kenney Rocket.ttf", "rocket");
 
             uResourcesManager.LoadImage("pabrojas.png", "pabrojas");
 

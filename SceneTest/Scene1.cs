@@ -22,7 +22,7 @@ namespace SceneTest
         private int ToDownKey = ((int)Keys.Down);
 
         private int Selected;
-        private bool editing;
+        private bool Editing;
 
         public void GameUpdate(int DeltaTime)
         {
@@ -30,71 +30,83 @@ namespace SceneTest
 
         public void ProcessInputs()
         {
-            if(uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Escape))
+            if (Editing == false)
             {
-                uSceneManager.SetActive("menu");
-            }
 
-            if (uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Down))
-            {
-                if (DownPressed == false)
+                if (uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Escape))
                 {
-                    DownPressed = true;
-                    Selected++;
-                    if (Selected >= 1)
+                    uSceneManager.SetActive("menu");
+                }
+
+                if (uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Down))
+                {
+                    if (DownPressed == false)
                     {
-                        Selected = 1;
+                        DownPressed = true;
+                        Selected++;
+                        if (Selected >= 1)
+                        {
+                            Selected = 1;
+                        }
                     }
                 }
+                else
+                {
+                    DownPressed = false;
+                }
+
+                if (uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Up))
+                {
+                    if (UpPressed == false)
+                    {
+                        UpPressed = true;
+                        Selected--;
+                        if (Selected <= 0)
+                        {
+                            Selected = 0;
+                        }
+                    }
+                }
+                else
+                {
+                    UpPressed = false;
+                }
+
+                if (uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Enter))
+                {
+                    if (EnterPressed == false)
+                    {
+                        EnterPressed = true;
+                        Editing = true;
+                    }
+                }
+                else
+                {
+                    EnterPressed = false;
+                }
+
+                if (Editing == true)
+                {
+                    Keys? pressed = uInputManager.GetKeyPressed();
+                    if (pressed.HasValue)
+                    {
+                        switch (Selected)
+                        {
+                            case 0: ToUpKey = (int)pressed.Value; break;
+                            case 1: ToDownKey = (int)pressed.Value; break;
+                        }
+                    }
+
+
+                }
+
             }
             else
             {
-                DownPressed = false;
-            }
-
-            if (uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Up))
-            {
-                if (UpPressed == false)
+                if (uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Escape))
                 {
-                    UpPressed = true;
-                    Selected--;
-                    if (Selected <= 0)
-                    {
-                        Selected = 0;
-                    }
+                    Editing = false;
                 }
-            }
-            else
-            {
-                UpPressed = false;
-            }
-
-            if (uInputManager.IsKeyPressed(System.Windows.Forms.Keys.Enter))
-            {
-                if (EnterPressed == false)
-                {
-                    EnterPressed = true;
-                    editing = true;
-                }
-            }
-            else
-            {
-                EnterPressed = false;
-            }
-
-            if( editing == true )
-            {
-                Keys? pressed = uInputManager.GetKeyPressed();
-                if( pressed.HasValue )
-                {
-                    switch (Selected)
-                    {
-                        case 0: ToUpKey = (int)pressed.Value; break;
-                        case 1: ToDownKey = (int)pressed.Value; break;
-                    }
-                }
-
-
             }
 
 
@@ -125,8 +137,8 @@ namespace SceneTest
             Keys down = (Keys)ToDownKey;
             Keys up = (Keys)ToUpKey;
 
-            string textUp = ( Selected == 0 && editing == true ) ? "<press any key>" : up.ToString();
-            string textDown = ( Selected == 1 && editing == true ) ? "<press any key>" : down.ToString();
+            string textUp = ( Selected == 0 && Editing == true ) ? "<press any key>" : up.ToString();
+            string textDown = ( Selected == 1 && Editing == true ) ? "<press any key>" : down.ToString();
 
             g.DrawString("Arriba : " + textUp, menuFont, new SolidBrush(m1), x, y);
             g.DrawString("Abajo : " + textDown, menuFont, new SolidBrush(m2), x, y + 50);

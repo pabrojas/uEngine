@@ -16,21 +16,30 @@ namespace uEngine.Managers
 
         static private int FontIndex = 0;
         static private PrivateFontCollection FontCollection = new PrivateFontCollection(); 
-        static private Dictionary<string, int> FontMap = new Dictionary<string, int>();
-
+        static private Dictionary<string, int> FontIndexMap = new Dictionary<string, int>();
+        static private Dictionary<string, int> FontFilenameMap = new Dictionary<string, int>();
+        
         public static void Load(string filename, string id)
         {
             if (File.Exists(FontsPath + filename))
             {
-                if (FontMap.ContainsKey(id))
+                if (FontIndexMap.ContainsKey(id))
                 {
                     throw new uResourceIdDuplicatedException(id);
                 }
                 else
                 {
-                    FontCollection.AddFontFile(FontsPath + filename);
-                    FontMap.Add(id, FontIndex);
-                    FontIndex++;
+                    if (FontFilenameMap.ContainsKey(filename))
+                    {
+                        FontIndexMap.Add(id, FontFilenameMap[filename]);
+                    }
+                    else
+                    {
+                        FontCollection.AddFontFile(FontsPath + filename);
+                        FontIndexMap.Add(id, FontIndex);
+                        FontFilenameMap.Add(filename, FontIndex);
+                        FontIndex++;
+                    }
                 }
             }
             else
@@ -41,9 +50,9 @@ namespace uEngine.Managers
 
         public static Font Get(string id, int size)
         {
-            if (FontMap.ContainsKey(id))
+            if (FontIndexMap.ContainsKey(id))
             {
-                int index = FontMap[id];
+                int index = FontIndexMap[id];
                 return new Font(FontCollection.Families[index], size);
             }
 

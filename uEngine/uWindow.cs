@@ -38,7 +38,14 @@ namespace uEngine
 
         public void Render()
         {
-            ManagedBackBuffer.Render();
+            try
+            {
+                ManagedBackBuffer.Render();
+            }
+            catch
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void CustomKeyDown(object sender, KeyEventArgs e)
