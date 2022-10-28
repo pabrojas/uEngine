@@ -13,29 +13,41 @@ namespace uEngine
 
         public static void KeyDown(Keys key)
         {
-            if (!TeclasPresionadas.Contains(key))
+            lock (TeclasPresionadas)
             {
-                TeclasPresionadas.Add(key);
+                if (!TeclasPresionadas.Contains(key))
+                {
+                    TeclasPresionadas.Add(key);
+                }
             }
         }
         public static void KeyUp(Keys key)
         {
-            if (TeclasPresionadas.Contains(key))
+            lock (TeclasPresionadas)
             {
-                TeclasPresionadas.Remove(key);
+                if (TeclasPresionadas.Contains(key))
+                {
+                    TeclasPresionadas.Remove(key);
+                }
             }
         }
         public static bool IsKeyPressed(Keys key)
         {
-            return TeclasPresionadas.Contains(key);
+            lock (TeclasPresionadas)
+            {
+                return TeclasPresionadas.Contains(key);
+            }
         }
 
 
         public static Keys? GetKeyPressed()
         {
-            if( TeclasPresionadas.Count > 0 )
+            lock (TeclasPresionadas)
             {
-                return TeclasPresionadas.First();
+                if (TeclasPresionadas.Count > 0)
+                {
+                    return TeclasPresionadas.First();
+                }
             }
 
             return null;
