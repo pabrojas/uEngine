@@ -18,14 +18,18 @@ namespace uEngine
         private int targetTime { get; set; }
         private uWindow MainWindow;
 
+        public static uBounds<float> Viewport { set; get; }
+
         public static int WindowWidth { get; private set; }
         public static int WindowHeight { get; private set; }
 
         public static int DeltaTime;
+        
 
-
-        public uGame(int windowWidth, int windowHeight, int FPS)
+        public uGame(int windowWidth, int windowHeight, uBounds<float> viewport, int FPS)
         {
+            Viewport = viewport;
+
             targetTime = 1000 / FPS;
             MainWindow = new uWindow(windowWidth, windowHeight);
 
