@@ -92,7 +92,9 @@
     <Compile Include="uConverter.cs" />
     <Compile Include="uGame.cs" />
     <Compile Include="Managers\uImagePool.cs" />
+    <Compile Include="uGameObject.cs" />
     <Compile Include="uInputManager.cs" />
+    <Compile Include="uSprite.cs" />
     <Compile Include="uWindow.cs">
       <SubType>Form</SubType>
     </Compile>

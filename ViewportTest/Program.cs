@@ -14,8 +14,26 @@ namespace ViewportTest
     {
         static void Main(string[] args)
         {
-            uResourcesManager.LoadImage("white.png", "white");
-            uResourcesManager.LoadImage("blue.png", "blue");
+            //1024 x 1024
+            uResourcesManager.LoadImage("Backgrounds/backgroundForest.png", "background");
+            //70 x 70
+            uResourcesManager.LoadImage("Tiles/chocoCenter.png", "bottom");
+            uResourcesManager.LoadImage("Tiles/chocoMid.png", "top");
+            //120 x 201
+            uResourcesManager.LoadImage("Players/bunny1_stand.png", "player");
+
+            for (int i = 1; i < 17; i++)
+            {
+                uResourcesManager.LoadImage("Players/png/Idle (" + i + ").png", "player" + i);
+            }
+
+            for (int i = 1; i < 21; i++)
+            {
+                uResourcesManager.LoadImage("Players/png/Walk (" + i + ").png", "walk" + i);
+            }
+
+
+
             ViewportGame game = new ViewportGame(800, 600, new uBounds<float>(0, 0, 800, 600), 60);
 
             game.Start();
