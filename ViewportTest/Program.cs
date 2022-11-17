@@ -21,6 +21,8 @@ namespace ViewportTest
             uResourcesManager.LoadImage("Tiles/chocoMid.png", "top");
             //120 x 201
             uResourcesManager.LoadImage("Players/bunny1_stand.png", "player");
+            //64 x 64
+            uResourcesManager.LoadImage("Environment/environment_12.png", "coin");
 
             for (int i = 1; i < 17; i++)
             {
